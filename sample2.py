@@ -27,6 +27,10 @@ def update_iss_position(m, icon_path):
         plt.clf()
         m.bluemarble()
         plot_iss_on_map(m, latitude, longitude, icon_path)
+        
+        title_text = "ISS Location - Latitude: {:.6f}, Longitude: {:.6f}".format(latitude, longitude)
+        plt.title(title_text, color='black')
+
         plt.pause(5)  # Pause for 5 seconds before updating
 
 def main():
