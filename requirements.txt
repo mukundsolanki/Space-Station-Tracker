@@ -1,11 +1,6 @@
-pip install jsonlib
-
-pip install turtle
-
-pip install urllib3
-
-pip install times
-
-pip install pycopy-webbrowser
-
-pip install geocoder
+pip install requests
+pip install pillow
+pip install basemap
+pip install matplotlib
+# pip install pycopy-webbrowser
+# pip install geocoder
