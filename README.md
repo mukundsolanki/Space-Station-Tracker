@@ -12,6 +12,8 @@ The ISS travels at an average speed of about 28,000 kilometers per hour (17,500 
 
 The bot is Live on twitter : [@ISSLocatorBot](https://twitter.com/ISSLocatorBot)
 
+![image](https://github.com/mukundsolanki/Space-Station-Tracker/assets/114515612/fabf1009-d17a-437b-a1e1-8882b7f7290e)
+
 ## Features
 
 - **ISS Position Tracking**: The bot tracks the real-time position of the ISS using available APIs.
@@ -66,6 +68,9 @@ If you want to run the Bot then just setup the credentials and libraries and run
 
 ## Screenshots of GUI:
 
+The ISS moves at a very fast speed so I fast-forwarded the video 
+
+[Screenshot of GUI](https://github.com/mukundsolanki/Space-Station-Tracker/assets/114515612/a9f86438-c6af-4633-a332-1f6f3b81213b)
 
 
 # Contributions
