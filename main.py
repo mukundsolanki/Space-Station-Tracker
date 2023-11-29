@@ -39,7 +39,7 @@ def main():
     m.bluemarble()
 
     latitude, longitude = get_iss_location()
-    icon_path = 'space-station.png'
+    icon_path = 'images/space-station.png'
     plot_iss_on_map(m, latitude, longitude, icon_path)
     update_iss_position(m, icon_path)
 
