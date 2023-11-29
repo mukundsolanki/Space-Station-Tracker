@@ -70,8 +70,7 @@ If you want to run the Bot then just setup the credentials and libraries and run
 
 The ISS moves at a very fast speed so I fast-forwarded the video 
 
-[Screenshot of GUI](https://github.com/mukundsolanki/Space-Station-Tracker/assets/114515612/a9f86438-c6af-4633-a332-1f6f3b81213b)
-
+![Demo](https://github.com/mukundsolanki/Space-Station-Tracker/assets/114515612/0d252270-f60f-4522-a91a-e42b5d2efce1)
 
 # Contributions
 
@@ -80,4 +79,4 @@ If you would like to contribute to the project, feel free to fork the repository
 Give this Repo a ⭐ if you like it.
 
 # License
-This project is licensed under the MIT License.
+This project is licensed under the GNU License.
