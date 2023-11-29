@@ -28,6 +28,11 @@ def get_iss_location():
     iss_position = data['iss_position']
     return float(iss_position['latitude']), float(iss_position['longitude'])
 
+def get_iss_crew():
+    response = requests.get("http://api.open-notify.org/astros.json")
+    data = response.json()
+    return data['people']
+
 def plot_iss_on_map(m, latitude, longitude, icon_path):
     x, y = m(longitude, latitude)
     iss_icon = plt.imread(icon_path)
@@ -38,6 +43,8 @@ def plot_iss_on_map(m, latitude, longitude, icon_path):
 def update_iss_position(m, icon_path, api):
     while True:
         latitude, longitude = get_iss_location()
+        crew = get_iss_crew()
+
         plt.clf()
         m.bluemarble()
         plot_iss_on_map(m, latitude, longitude, icon_path)
@@ -45,21 +52,22 @@ def update_iss_position(m, icon_path, api):
         title_text = "ISS Location - Latitude: {:.6f}, Longitude: {:.6f}".format(latitude, longitude)
         plt.title(title_text, color='black')
 
+        # Include crew information in the tweet text
+        tweet_text = f"{title_text}\n\nCurrent Crew:\n"
+        for member in crew:
+            tweet_text += f"{member['name']} ({member['craft']})\n"
+
         # Save the current figure to a file
         plt.savefig('tweet_images/iss_location_map.png')
         media_id = api.media_upload(filename="tweet_images/iss_location_map.png").media_id_string
-        print(media_id)
 
-        tweet_text = title_text
-        # api.update_with_media('iss_location_map.png', status=tweet_text)
+        # Tweet with both map image and crew information
         client.create_tweet(text=tweet_text, media_ids=[media_id])
-        print("Tweet Sucessfull")
+        print("Tweet Successful")
 
-        time.sleep(120)
-
+        time.sleep(300)
 
 def main():
-
     fig = plt.figure(figsize=(12, 6))
     m = Basemap(projection='mill', llcrnrlat=-60, urcrnrlat=80, llcrnrlon=-180, urcrnrlon=180, resolution='c')
     m.bluemarble()
