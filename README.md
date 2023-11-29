@@ -52,10 +52,11 @@ Before you start, make sure you have the following:
 Create a `.env` file with the following Twitter API credentials:
 
     ```
-    TWITTER_API_KEY=your_api_key
-    TWITTER_API_SECRET=your_api_secret
-    TWITTER_ACCESS_TOKEN=your_access_token
-    TWITTER_ACCESS_TOKEN_SECRET=your_access_token_secret
+    API_KEY=your_api_key
+    API_SECRET=your_api_secret
+    ACCESS_TOKEN=your_access_token
+    ACCESS_TOKEN_SECRET=your_access_token_secret
+    BEARER_TOKEN=your_bearer_token
     ```
 
 - ## Run the GUI:
