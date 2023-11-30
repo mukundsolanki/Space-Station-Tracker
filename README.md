@@ -38,7 +38,6 @@ Before you start, make sure you have the following:
 
     ```bash
     git clone https://github.com/mukundsolanki/Space-Station-Tracker.git
-    cd iss-tracker-bot
     ```
 
 2. Install dependencies:
